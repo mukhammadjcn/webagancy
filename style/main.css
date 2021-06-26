@@ -61,6 +61,10 @@ body {
   text-align: center;
 }
 
+.cancel-btn {
+  display: none;
+}
+
 .header {
   width: 100%;
   padding: 36px 180px;
@@ -612,9 +616,23 @@ body {
     top: 0;
     left: -5000px;
     height: 100vh;
-    width: 100vw;
+    width: 80vw;
     padding: 100px 0;
     background-color: white;
+    gap: 60px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .cancel-btn {
+    display: block;
+    font-size: 24px;
+    width: 26px;
+    height: 26px;
+    border: none;
+    position: absolute;
+    background: none;
+    top: 24px;
+    right: 24px;
   }
   .header {
     padding: 28px 48px;
@@ -705,6 +723,141 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .team-member img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .section-label {
+    font-size: 14px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+  .section-info {
+    font-size: 12px;
+  }
+  .header {
+    padding: 20px;
+  }
+  .intro-text {
+    width: 100%;
+  }
+  .intro-img {
+    display: none;
+  }
+  .feedback {
+    height: auto;
+    margin: 0 4px;
+  }
+  .category-item {
+    padding: 14px 13px;
+    width: 148px;
+    height: 148px;
+    gap: 32px;
+  }
+  .features .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .feedback-user__info .user-label {
+    font-size: 9px;
+  }
+  .feedback__message {
+    font-size: 12px;
+  }
+  .feedback-user__info .user-title {
+    font-size: 14px;
+    line-height: 120%;
+  }
+  .feedback-user {
+    padding-top: 24px;
+  }
+  .clients .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
+  .form {
+    width: 100%;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .form input, .form select {
+    display: none;
+  }
+  .form button {
+    width: 100%;
+  }
+  .price-plan {
+    margin: 0 4px;
+    height: auto;
+    padding: 16px 14px;
+  }
+  .price-plan__label {
+    font-size: 16px;
+  }
+  .price-plan__value {
+    font-size: 20px;
+    padding: 6px 0;
+  }
+  .price-plan__info {
+    font-size: 14px;
+    padding-bottom: 16px;
+  }
+  .price-plan .btn {
+    width: 100%;
+  }
+  .search-title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 140%;
+    width: 100%;
+  }
+  .footer {
+    padding: 120px 0;
+  }
+  .footer .container > .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 36px;
+  }
+  .footer .container > .row .social-info {
+    width: 95%;
+  }
+  .category .row .right-dots {
+    right: -20px;
+    top: -80px;
+  }
+  .slider-buttons {
+    gap: 0px !important;
+    height: 32px;
+  }
+  .slider-buttons svg {
+    height: 100%;
+  }
+  .feature-item {
+    text-align: center;
+  }
+  .feature-item__icon svg {
+    height: 64px;
+  }
+  .feature-item__title {
+    font-size: 18px;
+  }
+  .feature-item__info {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=main.css.map */

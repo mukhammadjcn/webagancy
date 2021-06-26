@@ -3,22 +3,22 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 2.1,
         slidesToScroll: 1,
-        autoplay: false,
-        centerMode: true,
+        autoplay: true,
+        centerMode: false,
         autoplaySpeed: 6000,
         responsive: [
             {
               breakpoint: 800,
               settings: {
-                slidesToShow: 1.1,
+                slidesToShow: 1.03,
                 slidesToScroll: 1
               }
             },
             {
-              breakpoint: 480,
+              breakpoint: 400,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 0.6,
               }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -34,20 +34,19 @@ $(document).ready(function(){
         slidesToShow: 2.5,
         slidesToScroll: 1,
         autoplay: true,
-        centerMode: true,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 3000,
         responsive: [
             {
               breakpoint: 800,
               settings: {
-                slidesToShow: 1.1,
+                slidesToShow: 1.03,
                 slidesToScroll: 1
               }
             },
             {
               breakpoint: 480,
               settings: {
-                slidesToShow: 1,
+                slidesToShow: 1.1,
                 slidesToScroll: 1
               }
             }
@@ -57,4 +56,12 @@ $(document).ready(function(){
           ]
       });
 });
+
+var navbar = document.querySelector(".navbar")
+function showMenu(){
+    navbar.style.left = '0px'
+}
+function hideMenu(){
+    navbar.style.left = '-5000px'
+}
 

@@ -50,6 +50,9 @@ body{
     line-height: 170%;
     text-align: center;
 }
+.cancel-btn{
+    display: none;
+}
 
 
 //Header
@@ -501,9 +504,22 @@ body{
         top: 0;
         left: -5000px;
         height: 100vh;
-        width: 100vw;
+        width: 80vw;
         padding: 100px 0;
         background-color: white;
+        gap: 60px;
+        transition: 0.3s ease-in-out;
+    }
+    .cancel-btn{
+        display: block;
+        font-size: 24px;
+        width: 26px;
+        height: 26px;
+        border: none;
+        position: absolute;
+        background: none;
+        top: 24px;
+        right: 24px;
     }
     .header{
         padding: 28px 48px;
@@ -518,8 +534,6 @@ body{
     .section-info{
         font-size: 16px;
     }
-
-
 
     // intro
     .intro-images{
@@ -550,8 +564,6 @@ body{
             font-weight: 500;
         }
     }
-
-
     //category
     .category .bg{
         margin: 0;
@@ -563,14 +575,10 @@ body{
     .section-info{
         width: 100%;
     }
-
-
     //feature
     .feature-item{
         flex-basis: 50%;
     }
-    
-
     //testmonila
     .feedback{
         height: auto;
@@ -582,8 +590,6 @@ body{
     .feedback-user{
         padding-top: 48px;
     }
-
-
     //price plan
     .price-plan{
         margin: 0 15px;
@@ -597,24 +603,149 @@ body{
             margin-top: 3rem;
         }
     }
-
-
     //search
     .search-title{
         font-size: 32px;
         line-height: 140%;
     }
-
-
-
-
-
-
-
-
-
-
     .team .row {
         flex-direction: column;
     }
+    .team-member{
+        img{
+            width: 100%;
+        }
+    }  
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:400px){
+    .section-label{
+        font-size: 14px;
+    }
+    .section-title{
+        font-size: 20px;
+    }
+    .section-info{
+        font-size: 12px;
+    }
+    .header{
+        padding: 20px;
+    }
+    .intro-text{
+        width: 100%;
+    }
+    .intro-img{
+        display: none;
+    }
+    .feedback{
+        height: auto;
+        margin: 0 4px;
+    }
+    .category-item {
+        padding: 14px 13px;
+        width: 148px;
+        height: 148px;
+        gap: 32px;
+    }
+    .features .row{
+        flex-direction: column;
+    }
+    .feedback-user__info .user-label {
+        font-size: 9px;   
+    }
+    .feedback__message {
+        font-size: 12px;
+    }
+    .feedback-user__info .user-title {
+        font-size: 14px;
+        line-height: 120%;
+    }
+    .feedback-user {
+        padding-top: 24px;
+    }
+    .clients .row{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .form{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        input, select{
+            display: none;
+        }
+        button{
+            width: 100%;
+        }
+    }
+    .price-plan{
+        margin: 0 4px;
+        height: auto;
+        padding: 16px 14px;
+        &__label{
+            font-size: 16px;
+        }
+        &__value{
+            font-size: 20px;
+            padding: 6px 0;
+        }
+        &__info{
+            font-size: 14px;
+            padding-bottom: 16px;
+        }
+        .btn{
+            width: 100%;
+        }
+    }
+    .search-title{
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 140%;
+        width: 100%;
+    }
+    .footer{
+        padding:120px 0;
+    }
+    .footer .container > .row{
+        flex-direction: column;
+        gap: 36px;
+        .social-info{
+            width: 95%;
+        }
+    }
+    .category .row .right-dots {
+        right: -20px;
+        top: -80px;
+    }
+    .slider-buttons{
+        gap: 0px !important;
+        height: 32px;
+        svg{
+            height: 100%;
+        }
+    }
+    .feature-item{
+        text-align: center;
+        &__icon{
+            svg{
+                height: 64px;
+            }
+        }
+        &__title{
+            font-size: 18px;
+        }
+        &__info{
+            font-size: 12px;
+        }
+    }
+    
 }
