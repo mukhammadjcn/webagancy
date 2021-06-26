@@ -620,8 +620,14 @@ body {
     padding: 100px 0;
     background-color: white;
     gap: 60px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
+  }
+  .navbar .nav-item {
+    font-size: 24px;
   }
   .cancel-btn {
     display: block;
@@ -636,7 +642,7 @@ body {
   }
   .header {
     padding: 28px 48px;
-    width: 100vw;
+    width: 100%;
   }
   .section-title {
     font-size: 28px;
