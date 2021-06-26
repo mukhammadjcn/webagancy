@@ -31,16 +31,16 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.price-slider').slick({
         infinite: true,
-        slidesToShow: 2.5,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 3000,
         responsive: [
             {
               breakpoint: 800,
               settings: {
-                slidesToShow: 1.03,
-                slidesToScroll: 1
+                slidesToShow: 1.2,
+                slidesToScroll: 1,
               }
             },
             {

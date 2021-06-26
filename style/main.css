@@ -417,8 +417,6 @@ body {
 }
 
 .price-plan {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
   padding: 40px 30px;
   border: 1px solid #AAAAAA;
   height: 580px;
@@ -432,6 +430,19 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 15px;
+}
+
+.price-plan .btn {
+  padding: 16px 36px;
+}
+
+.price-plan .mr-top-6 {
+  margin-top: 6rem;
+}
+
+.price-plan .mr-top-3 {
+  margin-top: 3rem;
 }
 
 .price-plan:hover {
@@ -600,6 +611,7 @@ body {
 @media (max-width: 760px) {
   body {
     overflow-x: hidden;
+    width: 100vw;
   }
   .container {
     max-width: 90%;
@@ -707,18 +719,6 @@ body {
   }
   .feedback-user {
     padding-top: 48px;
-  }
-  .price-plan {
-    margin: 0 15px;
-  }
-  .price-plan .btn {
-    padding: 16px 36px;
-  }
-  .price-plan .mr-top-6 {
-    margin-top: 6rem;
-  }
-  .price-plan .mr-top-3 {
-    margin-top: 3rem;
   }
   .search-title {
     font-size: 32px;
