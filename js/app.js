@@ -1,11 +1,13 @@
 $(document).ready(function(){
     $('.slider').slick({
         infinite: true,
-        slidesToShow: 2.1,
+        slidesToShow: 2.02,
         slidesToScroll: 1,
         autoplay: true,
         centerMode: false,
         autoplaySpeed: 4000,
+        prevArrow : $(".left-arrow"),
+        nextArrow : $(".right-arrow"),
         responsive: [
             {
               breakpoint: 800,
@@ -15,10 +17,10 @@ $(document).ready(function(){
               }
             },
             {
-              breakpoint: 400,
+              breakpoint: 500,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 0.6,
+                slidesToScroll: 1
               }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -36,6 +38,13 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 3000,
         responsive: [
+          {
+            breakpoint: 1030,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
             {
               breakpoint: 800,
               settings: {
@@ -46,7 +55,7 @@ $(document).ready(function(){
             {
               breakpoint: 480,
               settings: {
-                slidesToShow: 1.1,
+                slidesToShow: 1,
                 slidesToScroll: 1
               }
             }
@@ -64,4 +73,8 @@ function showMenu(){
 function hideMenu(){
     navbar.style.left = '-5000px'
 }
+
+setTimeout(function(){
+  $('.loader').fadeToggle();
+}, 1500);
 
