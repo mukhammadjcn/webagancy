@@ -278,6 +278,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 36px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  border: 1px solid transparent;
 }
 
 .category-item__name {
@@ -287,6 +290,13 @@ body {
   color: #333333;
 }
 
+.category-item:hover {
+  -webkit-box-shadow: 0 0 30px rgba(255, 161, 73, 0.5);
+          box-shadow: 0 0 30px rgba(255, 161, 73, 0.5);
+  border-radius: 10px;
+  border-color: #FFA149;
+}
+
 .features {
   margin: 200px 0;
 }
@@ -294,6 +304,7 @@ body {
 .features .row {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 20px;
 }
 
 .feature-item {
@@ -301,6 +312,10 @@ body {
   -webkit-box-flex: 30%;
       -ms-flex: 30% 1 1;
           flex: 30% 1 1;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .feature-item__title {
@@ -315,6 +330,12 @@ body {
   font-size: 18px;
   line-height: 170%;
   color: #555555;
+}
+
+.feature-item:hover {
+  border-color: #FFA149;
+  -webkit-box-shadow: 0 0 30px rgba(255, 161, 73, 0.5);
+          box-shadow: 0 0 30px rgba(255, 161, 73, 0.5);
 }
 
 .testimonial {
@@ -403,6 +424,11 @@ body {
           justify-content: space-between;
 }
 
+.team-member {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
 .team-member__info {
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
@@ -411,6 +437,11 @@ body {
   background-color: #fff;
   padding: 20px 0;
   border: 1px solid #555555;
+}
+
+.team-member:hover {
+  -webkit-box-shadow: 0 0 30px rgba(255, 161, 73, 0.5);
+          box-shadow: 0 0 30px rgba(255, 161, 73, 0.5);
 }
 
 .plan .row {
@@ -613,6 +644,16 @@ body {
   color: #222222;
 }
 
+.footer__prg .heart {
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+  display: inline-block;
+}
+
+.footer__prg a {
+  color: #FFA149;
+}
+
 @media (max-width: 1180px) {
   .container {
     max-width: 90%;
@@ -704,6 +745,9 @@ body {
   .navbar .nav-item {
     font-size: 24px;
   }
+  .navbar li:hover::after {
+    width: 70%;
+  }
   .cancel-btn {
     display: block;
     font-size: 24px;
@@ -737,7 +781,7 @@ body {
     line-height: 140%;
   }
   .intro__label {
-    font-size: 16px;
+    font-size: 18px;
   }
   .intro-img {
     -ms-flex-preferred-size: 30%;
@@ -809,10 +853,10 @@ body {
     font-size: 14px;
   }
   .section-title {
-    font-size: 20px;
+    font-size: 22px;
   }
   .section-info {
-    font-size: 12px;
+    font-size: 18px;
   }
   .header {
     padding: 20px;
@@ -832,8 +876,8 @@ body {
   .category-item {
     text-align: center;
     padding: 14px 13px;
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     gap: 20px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -849,15 +893,15 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .feedback-user__info .user-label {
-    font-size: 9px;
-  }
   .feedback__message {
-    font-size: 12px;
+    font-size: 15px;
   }
   .feedback-user__info .user-title {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 120%;
+  }
+  .feedback-user__info .user-label {
+    font-size: 15px;
   }
   .feedback-user {
     padding-top: 24px;
@@ -881,14 +925,14 @@ body {
     padding: 16px 14px;
   }
   .price-plan__label {
-    font-size: 16px;
+    font-size: 32px;
   }
   .price-plan__value {
-    font-size: 20px;
+    font-size: 24px;
     padding: 6px 0;
   }
   .price-plan__info {
-    font-size: 14px;
+    font-size: 18px;
     padding-bottom: 16px;
   }
   .price-plan .btn {
@@ -931,10 +975,10 @@ body {
     height: 64px;
   }
   .feature-item__title {
-    font-size: 18px;
+    font-size: 20px;
   }
   .feature-item__info {
-    font-size: 12px;
+    font-size: 16px;
   }
   .testimonial .row {
     margin-left: 8px;
@@ -944,6 +988,9 @@ body {
   }
   .footer {
     padding-bottom: 80px;
+  }
+  .member-title {
+    font-size: 20px;
   }
 }
 
@@ -1092,5 +1139,27 @@ body {
   animation: dots-loader 5s infinite ease-in-out;
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=main.css.map */
