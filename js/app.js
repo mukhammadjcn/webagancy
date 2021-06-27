@@ -74,7 +74,5 @@ function hideMenu(){
     navbar.style.left = '-5000px'
 }
 
-setTimeout(function(){
-  $('.loader').fadeToggle();
-}, 1500);
+
 
